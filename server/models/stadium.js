@@ -7,4 +7,4 @@ var schema = mongoose.Schema({
   location: Object
 });
 
-module.exports = mongoose.model('Game', schema);
+module.exports = mongoose.model('Stadium', schema);
