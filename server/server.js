@@ -65,9 +65,9 @@ function buildAPIApp() {
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
   app.route("/:type(team|teams)/:id")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
-  app.route("/:type(fanscores|fanscoress)/")
+  app.route("/:type(fanscore|fanscores)/")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
-  app.route("/:type(fanscores|fanscoress)/:id")
+  app.route("/:type(fanscore|fanscores)/:id")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
   app.route("/:type(stadium|stadiums)/")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
