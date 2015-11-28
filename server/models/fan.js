@@ -3,7 +3,9 @@ var mongoose   = require('mongoose'),
 
 var schema = mongoose.Schema({
   name: String,
-  email: {type: String, lowercase: true}
+  email: {type: String, lowercase: true},
+  twitter: String,
+  fanScore: [{ref: 'Fanscore', type: ObjectId}]
 });
 
 module.exports = mongoose.model('Fan', schema);

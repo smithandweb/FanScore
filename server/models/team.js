@@ -3,7 +3,10 @@ var mongoose   = require('mongoose'),
 
 var schema = mongoose.Schema({
   name: String,
-  email: {type: String, lowercase: true}
+  fanScore: Number,
+  games: [{ref: 'Game', type: ObjectId}],
+  fans: [{ref: 'Fan', type: ObjectId}],
+  players: Array
 });
 
 module.exports = mongoose.model('Team', schema);
