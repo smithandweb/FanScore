@@ -107,3 +107,5 @@ if (process.getuid && process.getuid() === 0) {
   coreApp.listen(8080);
   console.log('Listening on port 8080 because you are not running as root.');
 }
+
+require('./console');
