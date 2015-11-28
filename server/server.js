@@ -19,7 +19,7 @@ var models =  {
   Game: require('./models/game'),
   Team: require('./models/team'),
   Fanscore: require('./models/fanscore'),
-  Stadium: require('./models/stadium')
+  Field: require('./models/field')
 };
 
 // Register with json-api
@@ -29,7 +29,7 @@ var registry = new API.ResourceTypeRegistry({
   games: require('./resources/game'),
   teams: require('./resources/team'),
   fanscores: require('./resources/fanscore'),
-  stadiums: require('./resources/stadium')
+  fields: require('./resources/field')
 }, { dbAdapter: adapter });
 
 var Controller = new API.controllers.API(registry);
@@ -50,6 +50,9 @@ function buildAPIApp() {
   // CORS
   app.use(cors());
 
+  // Logging
+  app.use(morgan('dev'));
+
   // Routes
   app.get("/", Front.docsRequest.bind(Front));
 
@@ -69,9 +72,9 @@ function buildAPIApp() {
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
   app.route("/:type(fanscore|fanscores)/:id")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
-  app.route("/:type(stadium|stadiums)/")
+  app.route("/:type(field|fields)/")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
-  app.route("/:type(stadium|stadiums)/:id")
+  app.route("/:type(field|fields)/:id")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
 
 
