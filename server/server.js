@@ -11,13 +11,19 @@ mongoose.connect('mongodb://localhost/fanscore');
 
 // Models
 var models =  {
-  Test: require('./models/test')
+  Test: require('./models/test'),
+  Fan: require('./models/fan'),
+  Game: require('./models/game'),
+  Team: require('./models/team'),
 };
 
 // Register with json-api
 var adapter = new API.dbAdapters.Mongoose(models);
 var registry = new API.ResourceTypeRegistry({
-  tests: require('./resources/test')
+  tests: require('./resources/test'),
+  fans: require('./resources/fan'),
+  games: require('./resources/game'),
+  teams: require('./resources/test')
 }, { dbAdapter: adapter });
 
 var Controller = new API.controllers.API(registry);
@@ -41,12 +47,18 @@ app.use(function(req, res, next) {
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
 app.route("/:type(test|tests)")
-  .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler);
+  .get(apiReqHandler);
+app.route("/:type(fan|fans)")
+  .get(apiReqHandler);
+app.route("/:type(game|games)")
+  .get(apiReqHandler);
+app.route("/:type(team|teams)")
+  .get(apiReqHandler);
 
 app.use(function(req, res, next) {
   Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
 });
 
 // And we're done! Start 'er up!
-console.log('Starting up! Visit 127.0.0.1:80 to see the docs.');
+console.log('Starting up! Visit 127.0.0.1 to see the docs.');
 app.listen(80);
