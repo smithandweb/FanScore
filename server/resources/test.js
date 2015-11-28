@@ -1,6 +1,6 @@
 module.exports = {
   urlTemplates: {
-    "self": "http://127.0.0.1:8080/test/{id}"
+    "self": "http://127.0.0.1:8080/tests/{id}"
   },
 
   /**

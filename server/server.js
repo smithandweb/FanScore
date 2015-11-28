@@ -10,13 +10,13 @@ mongoose.connect('mongodb://localhost/fanscore');
 
 // Models
 var models =  {
-  Test: require('./models/test')
+  Tests: require('./models/test')
 };
 
 // Register with json-api
 var adapter = new API.dbAdapters.Mongoose(models);
 var registry = new API.ResourceTypeRegistry({
-  test: require('./resources/test')
+  tests: require('./resources/test')
 }, { dbAdapter: adapter });
 
 var Controller = new API.controllers.API(registry);
