@@ -27,7 +27,7 @@ var Docs = new API.controllers.Documentation(registry, {name: 'FanScore API'});
 
 // Initialize the express app + front controller.
 var app = express();
-app.use(morgan('combined'));
+app.use(morgan('dev'));
 
 var Front = new API.httpStrategies.Express(Controller, Docs);
 var apiReqHandler = Front.apiRequest.bind(Front);
