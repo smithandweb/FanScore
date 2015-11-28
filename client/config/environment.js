@@ -28,8 +28,11 @@ module.exports = function(environment) {
       'style-src': "'self' https://*.googleapis.com ",
       'media-src': "'self' "
     }
+    
+    
+    
   };
-
+  
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -37,11 +40,18 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     
-    ENV.contentSecurityPolicy['connect-src'] +=
-      ENV.APP.host;
-    ENV.contentSecurityPolicy['script-src'] +=
-      ENV.APP.host;
     
+    
+  }
+  
+  if (environment === 'local') {
+    // ENV.APP.LOG_RESOLVER = true;
+    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    
+    ENV.APP.host = 'http://127.0.0.1:8080';
   }
 
   if (environment === 'test') {
@@ -59,6 +69,11 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+  
+  ENV.contentSecurityPolicy['connect-src'] +=
+    ENV.APP.host;
+  ENV.contentSecurityPolicy['script-src'] +=
+    ENV.APP.host;
 
   return ENV;
 };
