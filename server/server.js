@@ -62,4 +62,10 @@ app.use(function(req, res, next) {
 
 // And we're done! Start 'er up!
 console.log('Starting up! Visit 127.0.0.1 to see the docs.');
-app.listen(80);
+if (process.getuid && process.getuid() === 0) {
+  app.listen(80);
+  console.log('Listening on port 80.');
+} else {
+  app.listen(8080);
+  console.log('Listening on port 8080 because you are not running as root.');
+}
