@@ -49,9 +49,15 @@ app.use(cors());
 
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
+app.route("/:type(fan|fans)")
+  .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
 app.route("/:type(fan|fans)/:id")
   .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+app.route("/:type(game|games)/")
+  .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
 app.route("/:type(game|games)/:id")
+  .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+app.route("/:type(team|teams)/")
   .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
 app.route("/:type(team|teams)/:id")
   .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
