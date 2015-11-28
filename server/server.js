@@ -1,9 +1,12 @@
 'use strict';
 
-var express = require('express'),
+var connect = require('connect'),
+  express = require('express'),
   API = require('json-api'),
   APIError = API.types.Error,
   morgan = require('morgan'),
+  vhost = require('vhost'),
+  serveStatic = require('serve-static'),
   cors = require('cors'),
   mongoose = require('mongoose');
 
@@ -34,38 +37,67 @@ var Controller = new API.controllers.API(registry);
 // Initialize the automatic documentation.
 var Docs = new API.controllers.Documentation(registry, {name: 'FanScore API'});
 
-// Initialize the express app + front controller.
-var app = express();
-app.use(morgan('dev'));
-
 var Front = new API.httpStrategies.Express(Controller, Docs);
 var apiReqHandler = Front.apiRequest.bind(Front);
 var optionsHandler = function (req, res, next) {
   res.send(200);
 };
 
-// CORS
-app.use(cors());
+function buildAPIApp() {
+  // Initialize the express app + front controller.
+  var app = express();
 
-// Routes
-app.get("/", Front.docsRequest.bind(Front));
-app.route("/:type(fan|fans):/id")
-  .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
-app.route("/:type(game|games)/:id")
-  .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
-app.route("/:type(team|teams)/:id")
-  .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+  // CORS
+  app.use(cors());
 
-app.use(function(req, res, next) {
-  Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
+  // Routes
+  app.get("/", Front.docsRequest.bind(Front));
+  app.route("/:type(fan|fans):/id")
+    .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+  app.route("/:type(game|games)/:id")
+    .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+  app.route("/:type(team|teams)/:id")
+    .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+
+  app.use(function(req, res, next) {
+    Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
+  });
+
+  return app;
+}
+
+var registeredAPIDomains = {};
+
+var coreApp = connect();
+coreApp.use(function coreHandler(req, res, next) {
+  var host = req.headers['host'];
+  if (host && host.substr(0, 4) === 'api.') {
+    var idx = host.indexOf(':');
+    if (~idx) {
+      // Trim off port
+      host = host.substr(0, idx);
+    }
+    // Register API handler for domain
+    if (!registeredAPIDomains[host]) {
+      coreApp.use(vhost(host, registeredAPIDomains[host] = buildAPIApp()));
+      var route = coreApp.stack.pop();
+      // Reinject at the correct position
+      coreApp.stack.splice(coreAppStackOffset, 0, route);
+      console.log('Registering API domain handler for %s.', host);
+    } // Else already registered
+  }
+  next();
 });
+var coreAppStackOffset = coreApp.stack.length;
+coreApp.use(serveStatic('../client/dist'));
+coreApp.use(morgan('dev'));
 
 // And we're done! Start 'er up!
 console.log('Starting up! Visit 127.0.0.1 to see the docs.');
 if (process.getuid && process.getuid() === 0) {
-  app.listen(80);
+  coreApp.listen(80);
   console.log('Listening on port 80.');
 } else {
-  app.listen(8080);
+  coreApp.listen(8080);
   console.log('Listening on port 8080 because you are not running as root.');
 }

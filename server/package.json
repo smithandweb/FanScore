@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/smithandweb/FanScore#readme",
   "dependencies": {
+    "connect": "^3.4.0",
     "cors": "^2.7.1",
     "express": "^4.13.3",
     "json-api": "^2.15.5",
     "kerberos": "0.0.17",
     "mongoose": "^4.2.8",
-    "morgan": "^1.6.1"
+    "morgan": "^1.6.1",
+    "serve-static": "^1.10.0",
+    "vhost": "^3.0.2"
   }
 }
