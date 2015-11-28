@@ -42,19 +42,28 @@ var apiReqHandler = Front.apiRequest.bind(Front);
 app.use(function(req, res, next) {
   res.set('Access-Control-Allow-Origin', '*');
   res.set('Access-Control-Allow-Methods', 'GET, POST, PATCH, OPTIONS');
+  res.set('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
 
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
 app.route("/:type(test|tests)")
-  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
+    next();
+  });
 app.route("/:type(fan|fans)")
-  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
+    next();
+  });
 app.route("/:type(game|games)")
-  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
+    next();
+  });
 app.route("/:type(team|teams)")
-  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
+    next();
+  });
 
 app.use(function(req, res, next) {
   Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
