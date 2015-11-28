@@ -1,0 +1,10 @@
+<ul>
+  {{#each model as |test|}}
+    <li>
+      Name: {{test.name}}
+      Email: {{test.email}}
+    </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
