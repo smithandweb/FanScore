@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
 
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
-app.route("/:type(test)")
+app.route("/:type(tests)")
   .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler);
 
 app.use(function(req, res, next) {
