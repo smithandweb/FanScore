@@ -52,6 +52,7 @@ function buildAPIApp() {
 
   // Routes
   app.get("/", Front.docsRequest.bind(Front));
+
   app.route("/:type(fan|fans)")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
   app.route("/:type(fan|fans)/:id")
@@ -64,6 +65,15 @@ function buildAPIApp() {
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
   app.route("/:type(team|teams)/:id")
     .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+  app.route("/:type(fanscores|fanscoress)/")
+    .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+  app.route("/:type(fanscores|fanscoress)/:id")
+    .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+  app.route("/:type(stadium|stadiums)/")
+    .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+  app.route("/:type(stadium|stadiums)/:id")
+    .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
+
 
   app.use(function(req, res, next) {
     Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
