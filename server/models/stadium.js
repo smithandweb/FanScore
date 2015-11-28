@@ -3,7 +3,8 @@ var mongoose   = require('mongoose'),
 
 var schema = mongoose.Schema({
   name: String,
-  email: {type: String, lowercase: true}
+  type: String,
+  location: Object
 });
 
-module.exports = mongoose.model('Test', schema);
+module.exports = mongoose.model('Stadium', schema);

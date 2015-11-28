@@ -1,6 +1,6 @@
 module.exports = {
   urlTemplates: {
-    "self": "http://api.fanscore.xyz/tests/{id}"
+    "self": "http://127.0.0.1/fans/{id}"
   },
 
   /**
