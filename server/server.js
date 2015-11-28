@@ -16,6 +16,8 @@ var models =  {
   Fan: require('./models/fan'),
   Game: require('./models/game'),
   Team: require('./models/team'),
+  Fanscore: require('./models/fanscore'),
+  Stadium: require('./models/stadium')
 };
 
 // Register with json-api
@@ -24,7 +26,9 @@ var registry = new API.ResourceTypeRegistry({
   tests: require('./resources/test'),
   fans: require('./resources/fan'),
   games: require('./resources/game'),
-  teams: require('./resources/test')
+  teams: require('./resources/team'),
+  fanscores: require('./resources/fanscore'),
+  stadiums: require('./resources/stadium')
 }, { dbAdapter: adapter });
 
 var Controller = new API.controllers.API(registry);
