@@ -7,7 +7,7 @@ var express = require('express'),
   mongoose = require('mongoose');
 
 // Conect to mongoose
-mongoose.connect('mongodb://localhost/fanscore');
+mongoose.connect('mongodb://52.23.229.207/fanscore');
 
 // Models
 var models =  {
@@ -41,19 +41,20 @@ var apiReqHandler = Front.apiRequest.bind(Front);
 // CORS
 app.use(function(req, res, next) {
   res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Methods', 'GET, POST, PATCH, OPTIONS');
   next();
 });
 
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
 app.route("/:type(test|tests)")
-  .get(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
 app.route("/:type(fan|fans)")
-  .get(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
 app.route("/:type(game|games)")
-  .get(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
 app.route("/:type(team|teams)")
-  .get(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(apiReqHandler);
 
 app.use(function(req, res, next) {
   Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
