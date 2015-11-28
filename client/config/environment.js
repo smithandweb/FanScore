@@ -21,11 +21,11 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       // 'default-src': "'unsafe-inline'",
-      'script-src': "'self' https://*.googleapis.com https://*.gstatic.com",
-      'font-src': "'self' https://*.gstatic.com",
+      'script-src': "'self' https://*.googleapis.com https://*.gstatic.com ",
+      'font-src': "'self' https://*.gstatic.com ",
       'connect-src': "'self' ",
-      'img-src': "'self' https://*.googleapis.com https://*.gstatic.com data *",
-      'style-src': "'self' https://*.googleapis.com",
+      'img-src': "'self' https://*.googleapis.com https://*.gstatic.com data * ",
+      'style-src': "'self' https://*.googleapis.com ",
       'media-src': "'self' "
     }
   };
