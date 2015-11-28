@@ -16,6 +16,17 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      host: 'http://api.fanscore.xyz',
+    },
+
+    contentSecurityPolicy: {
+      // 'default-src': "'unsafe-inline'",
+      'script-src': "'self' https://*.googleapis.com https://*.gstatic.com",
+      'font-src': "'self' https://*.gstatic.com",
+      'connect-src': "'self' ",
+      'img-src': "'self' https://*.googleapis.com https://*.gstatic.com data *",
+      'style-src': "'self' https://*.googleapis.com",
+      'media-src': "'self' "
     }
   };
 
@@ -25,6 +36,12 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    
+    ENV.contentSecurityPolicy['connect-src'] +=
+      ENV.APP.host;
+    ENV.contentSecurityPolicy['script-src'] +=
+      ENV.APP.host;
+    
   }
 
   if (environment === 'test') {
