@@ -49,7 +49,7 @@ app.use(cors());
 
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
-app.route("/:type(fan|fans):/id")
+app.route("/:type(fan|fans)/:id")
   .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
 app.route("/:type(game|games)/:id")
   .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler).put(apiReqHandler).options(optionsHandler);
