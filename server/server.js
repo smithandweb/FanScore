@@ -38,6 +38,9 @@ app.use(morgan('dev'));
 
 var Front = new API.httpStrategies.Express(Controller, Docs);
 var apiReqHandler = Front.apiRequest.bind(Front);
+var optionsHandler = function (req, res, next) {
+  res.send(200);
+};
 
 // CORS
 app.use(cors());
@@ -45,13 +48,13 @@ app.use(cors());
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
 app.route("/:type(test|tests)")
-  .get(apiReqHandler).post(apiReqHandler).options(function(req, res, next) {res.send(200)});
+  .get(apiReqHandler).post(apiReqHandler).options(optionsHandler);
 app.route("/:type(fan|fans)")
-  .get(apiReqHandler).post(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(optionsHandler);
 app.route("/:type(game|games)")
-  .get(apiReqHandler).post(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(optionsHandler);
 app.route("/:type(team|teams)")
-  .get(apiReqHandler).post(apiReqHandler);
+  .get(apiReqHandler).post(apiReqHandler).options(optionsHandler);
 
 app.use(function(req, res, next) {
   Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
