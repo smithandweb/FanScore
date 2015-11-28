@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/fanscore');
 
 // Models
 var models =  {
-  Tests: require('./models/test')
+  Test: require('./models/test')
 };
 
 // Register with json-api
@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
 
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
-app.route("/:type(tests)")
+app.route("/:type(test|tests)")
   .get(apiReqHandler).post(apiReqHandler).patch(apiReqHandler);
 
 app.use(function(req, res, next) {

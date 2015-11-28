@@ -6,4 +6,4 @@ var schema = mongoose.Schema({
   email: {type: String, lowercase: true}
 });
 
-module.exports = mongoose.model('Tests', schema);
+module.exports = mongoose.model('Test', schema);
