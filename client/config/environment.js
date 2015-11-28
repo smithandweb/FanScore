@@ -51,7 +51,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     
-    ENV.APP.host = 'http://127.0.0.1:8080';
+    ENV.APP.host = 'http://api.fanscore.abc:8080';
   }
 
   if (environment === 'test') {
