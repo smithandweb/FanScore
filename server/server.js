@@ -3,6 +3,7 @@
 var express = require('express'),
   API = require('json-api'),
   APIError = API.types.Error,
+  morgan = require('morgan'),
   mongoose = require('mongoose');
 
 // Conect to mongoose
@@ -26,6 +27,8 @@ var Docs = new API.controllers.Documentation(registry, {name: 'FanScore API'});
 
 // Initialize the express app + front controller.
 var app = express();
+app.use(morgan('combined'));
+
 var Front = new API.httpStrategies.Express(Controller, Docs);
 var apiReqHandler = Front.apiRequest.bind(Front);
 
