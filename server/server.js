@@ -4,6 +4,7 @@ var express = require('express'),
   API = require('json-api'),
   APIError = API.types.Error,
   morgan = require('morgan'),
+  cors = require('cors'),
   mongoose = require('mongoose');
 
 // Conect to mongoose
@@ -39,31 +40,18 @@ var Front = new API.httpStrategies.Express(Controller, Docs);
 var apiReqHandler = Front.apiRequest.bind(Front);
 
 // CORS
-app.use(function(req, res, next) {
-  res.set('Access-Control-Allow-Origin', '*');
-  res.set('Access-Control-Allow-Methods', 'GET, POST, PATCH, OPTIONS');
-  res.set('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
+app.use(cors());
 
 // Routes
 app.get("/", Front.docsRequest.bind(Front));
 app.route("/:type(test|tests)")
-  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
-    next();
-  });
+  .get(apiReqHandler).post(apiReqHandler).options(function(req, res, next) {res.send(200)});
 app.route("/:type(fan|fans)")
-  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
-    next();
-  });
+  .get(apiReqHandler).post(apiReqHandler);
 app.route("/:type(game|games)")
-  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
-    next();
-  });
+  .get(apiReqHandler).post(apiReqHandler);
 app.route("/:type(team|teams)")
-  .get(apiReqHandler).post(apiReqHandler).options(function (req, res, next) {
-    next();
-  });
+  .get(apiReqHandler).post(apiReqHandler);
 
 app.use(function(req, res, next) {
   Front.sendError(new APIError(404, undefined, 'Not Found'), req, res);
