@@ -7,7 +7,8 @@ var schema = mongoose.Schema({
   stadium: {ref: 'Stadium', type: ObjectId},
   score: Object,
   attendance: Number,
-  soldout: Boolean
+  soldout: Boolean,
+  date: String
 });
 
 module.exports = mongoose.model('Game', schema);

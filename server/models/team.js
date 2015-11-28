@@ -5,6 +5,7 @@ var schema = mongoose.Schema({
   name: String,
   fanScore: Number,
   games: [{ref: 'Game', type: ObjectId}],
+  fans: [{ref: 'Fan', type: ObjectId}],
   players: Array
 });
 
