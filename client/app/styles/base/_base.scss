@@ -65,3 +65,229 @@ body {
     background-color: $action-color;
   }
 }
+
+// Fan page
+.fan-page {
+
+  .primary-header {
+    background-color: #222;
+    height: 200px;
+  }
+
+  .score {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: -100px auto 0px;
+    background: #fff;
+    border-radius: 50%;
+
+    .score-text {
+      line-height: 180px;
+      text-align: center;
+      font-size: 48px;
+      font-family: ""Fugaz One", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif";
+      border-style: solid;
+      border-width: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .score-content {
+    margin-top: 40px;
+
+    .score-text {
+      font-size: 24px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .fan-twitter, .fan-email {
+      text-align: center;
+    }
+
+    .fan-team {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .fan-interactions {
+      margin: 20px auto;
+      width:150px;
+      height:150px;
+      background-color: #fff;
+
+      .interactions-header {
+        text-align: center;
+        font-size: 24px;
+      }
+
+      .interactions-number {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        line-height: 130px;
+        font-size: 36px;
+        font-family: ""Fugaz One", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif";
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 10px;
+      }
+    }
+  }
+
+  &.hamilton-tiger-cats {
+    
+    .primary-header {
+      background-color: $ham-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $ham-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $ham-sec;
+    }   
+  }
+
+  &.edmonton-eskimos {
+    
+    .primary-header {
+      background-color: $edm-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $edm-sec;
+      }
+    }
+
+    .interactions-number {
+      border-color: $edm-sec;
+    }
+  }
+
+  &.ottawa-redblacks {
+    
+    .primary-header {
+      background-color: $ott-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $ott-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $ott-sec;
+    }
+  }
+
+  &.winnipeg-blue-bombers {
+    
+    .primary-header {
+      background-color: $wpg-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $wpg-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $wpg-sec;
+    }   
+  }
+
+  &.toronto-argonauts {
+    
+    .primary-header {
+      background-color: $tor-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $tor-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $tor-sec;
+    }   
+  }
+
+  &.saskatchewan-roughriders {
+    
+    .primary-header {
+      background-color: $sask-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $sask-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $sask-sec;
+    }   
+  }
+
+  &.montreal-alouettes {
+    
+    .primary-header {
+      background-color: $mon-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $mon-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $mon-sec;
+    }   
+  }
+
+  &.bc-lions {
+    
+    .primary-header {
+      background-color: $bc-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $bc-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $bc-sec;
+    }   
+  }
+
+  &.calgary-stampeders {
+    
+    .primary-header {
+      background-color: $cgy-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $cgy-sec!important;
+      }
+    }
+
+    .interactions-number {
+      border-color: $cgy-sec;
+    }   
+  }
+
+
+}
