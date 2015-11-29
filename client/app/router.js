@@ -7,7 +7,14 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('team', { path: '/team/:team_id' });
-  
+});
+
+Router.map(function() {
+  this.route('fan', { path: '/fan/:fan_id' });
+});
+
+Router.map(function() {
+  this.route('fanscore', { path: '/fanscore/:fanscore_id' });
 });
 
 export default Router;
