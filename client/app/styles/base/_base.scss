@@ -13,3 +13,49 @@
 @import "lists";
 @import "tables";
 @import "typography";
+
+body {
+  padding-top: 3em;
+}
+
+:focus {
+  outline: none;
+  box-shadow: $form-box-shadow-focus;
+}
+
+.icon {
+  margin: 0;
+}
+
+.logo {
+  font-family: $logo-font-family;
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background: $red;
+  
+  .logo {
+    color: $white;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: center;
+  }
+  .menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3em;
+    padding: 0.75em;
+  }
+}
+
+.menu-button {
+  .icon {
+    font-size: 1.5em;
+  }
+}

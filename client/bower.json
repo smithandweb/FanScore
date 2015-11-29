@@ -14,7 +14,8 @@
     "qunit": "~1.20.0",
     "bourbon": "~4.2.6",
     "neat": "~1.7.2",
-    "normalize-css": "~3.0.3"
+    "normalize-css": "~3.0.3",
+    "entypo": "git@github.com:danielbruce/entypo.git"
   },
   "resolutions": {
     "ember": "~2.2.0"

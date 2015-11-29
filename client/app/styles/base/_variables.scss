@@ -1,6 +1,7 @@
 // Typography
 $base-font-family: $helvetica;
 $heading-font-family: $base-font-family;
+$logo-font-family: "Exo", $helvetica;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -17,13 +18,15 @@ $base-z-index: 0;
 
 // Colors
 $blue: #477dca;
+$red: #d83621;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$white: #fff;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $red;
 
 // Border
 $base-border-color: $light-gray;
