@@ -8,7 +8,10 @@ var schema = mongoose.Schema({
   score: Object,
   attendance: Number,
   soldout: Boolean,
-  date: String
+  date: String,
+  weatherType: String,
+  weatherTemp: Number,
+  weatherWindSpeed: Number
 });
 
 module.exports = mongoose.model('Game', schema);
