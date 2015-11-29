@@ -1,0 +1,2014 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Fugaz+One);
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+@font-face {
+  font-family: 'entypo';
+  src: url("entypo.eot");
+  src: url("entypo.eot?#iefix") format("embedded-opentype"), url("entypo.woff") format("woff"), url("entypo.ttf") format("truetype"), url("entypo.svg#entypo") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: entypo;
+  font-style: normal;
+  /* font-size: 14px; */
+  display: inline-block;
+  width: 1.1em;
+  margin-right: .1em;
+  text-align: center; }
+
+.the-icons li {
+  font-size: 14px;
+  line-height: 24px;
+  height: 24px; }
+
+.icon-note:before {
+  content: "\266a"; }
+
+/* '\266a' */
+.icon-note-beamed:before {
+  content: "\266b"; }
+
+/* '\266b' */
+.icon-music:before {
+  content: "🎵"; }
+
+/* '\1f3b5' */
+.icon-search:before {
+  content: "🔍"; }
+
+/* '\1f50d' */
+.icon-flashlight:before {
+  content: "🔦"; }
+
+/* '\1f526' */
+.icon-mail:before {
+  content: "\2709"; }
+
+/* '\2709' */
+.icon-heart:before {
+  content: "\2665"; }
+
+/* '\2665' */
+.icon-heart-empty:before {
+  content: "\2661"; }
+
+/* '\2661' */
+.icon-star:before {
+  content: "\2605"; }
+
+/* '\2605' */
+.icon-star-empty:before {
+  content: "\2606"; }
+
+/* '\2606' */
+.icon-user:before {
+  content: "👤"; }
+
+/* '\1f464' */
+.icon-users:before {
+  content: "👥"; }
+
+/* '\1f465' */
+.icon-user-add:before {
+  content: "\e700"; }
+
+/* '\e700' */
+.icon-video:before {
+  content: "🎬"; }
+
+/* '\1f3ac' */
+.icon-picture:before {
+  content: "🌄"; }
+
+/* '\1f304' */
+.icon-camera:before {
+  content: "📷"; }
+
+/* '\1f4f7' */
+.icon-layout:before {
+  content: "\268f"; }
+
+/* '\268f' */
+.icon-menu:before {
+  content: "\2630"; }
+
+/* '\2630' */
+.icon-check:before {
+  content: "\2713"; }
+
+/* '\2713' */
+.icon-cancel:before {
+  content: "\2715"; }
+
+/* '\2715' */
+.icon-cancel-circled:before {
+  content: "\2716"; }
+
+/* '\2716' */
+.icon-cancel-squared:before {
+  content: "\274e"; }
+
+/* '\274e' */
+.icon-plus:before {
+  content: "\2b"; }
+
+/* '\2b' */
+.icon-plus-circled:before {
+  content: "\2795"; }
+
+/* '\2795' */
+.icon-plus-squared:before {
+  content: "\229e"; }
+
+/* '\229e' */
+.icon-minus:before {
+  content: "\2d"; }
+
+/* '\2d' */
+.icon-minus-circled:before {
+  content: "\2796"; }
+
+/* '\2796' */
+.icon-minus-squared:before {
+  content: "\229f"; }
+
+/* '\229f' */
+.icon-help:before {
+  content: "\2753"; }
+
+/* '\2753' */
+.icon-help-circled:before {
+  content: "\e704"; }
+
+/* '\e704' */
+.icon-info:before {
+  content: "\2139"; }
+
+/* '\2139' */
+.icon-info-circled:before {
+  content: "\e705"; }
+
+/* '\e705' */
+.icon-back:before {
+  content: "🔙"; }
+
+/* '\1f519' */
+.icon-home:before {
+  content: "\2302"; }
+
+/* '\2302' */
+.icon-link:before {
+  content: "🔗"; }
+
+/* '\1f517' */
+.icon-attach:before {
+  content: "📎"; }
+
+/* '\1f4ce' */
+.icon-lock:before {
+  content: "🔒"; }
+
+/* '\1f512' */
+.icon-lock-open:before {
+  content: "🔓"; }
+
+/* '\1f513' */
+.icon-eye:before {
+  content: "\e70a"; }
+
+/* '\e70a' */
+.icon-tag:before {
+  content: "\e70c"; }
+
+/* '\e70c' */
+.icon-bookmark:before {
+  content: "🔖"; }
+
+/* '\1f516' */
+.icon-bookmarks:before {
+  content: "📑"; }
+
+/* '\1f4d1' */
+.icon-flag:before {
+  content: "\2691"; }
+
+/* '\2691' */
+.icon-thumbs-up:before {
+  content: "👍"; }
+
+/* '\1f44d' */
+.icon-thumbs-down:before {
+  content: "👎"; }
+
+/* '\1f44e' */
+.icon-download:before {
+  content: "📥"; }
+
+/* '\1f4e5' */
+.icon-upload:before {
+  content: "📤"; }
+
+/* '\1f4e4' */
+.icon-upload-cloud:before {
+  content: "\e711"; }
+
+/* '\e711' */
+.icon-reply:before {
+  content: "\e712"; }
+
+/* '\e712' */
+.icon-reply-all:before {
+  content: "\e713"; }
+
+/* '\e713' */
+.icon-forward:before {
+  content: "\27a6"; }
+
+/* '\27a6' */
+.icon-quote:before {
+  content: "\275e"; }
+
+/* '\275e' */
+.icon-code:before {
+  content: "\e714"; }
+
+/* '\e714' */
+.icon-export:before {
+  content: "\e715"; }
+
+/* '\e715' */
+.icon-pencil:before {
+  content: "\270e"; }
+
+/* '\270e' */
+.icon-feather:before {
+  content: "\2712"; }
+
+/* '\2712' */
+.icon-print:before {
+  content: "\e716"; }
+
+/* '\e716' */
+.icon-retweet:before {
+  content: "\e717"; }
+
+/* '\e717' */
+.icon-keyboard:before {
+  content: "\2328"; }
+
+/* '\2328' */
+.icon-comment:before {
+  content: "\e718"; }
+
+/* '\e718' */
+.icon-chat:before {
+  content: "\e720"; }
+
+/* '\e720' */
+.icon-bell:before {
+  content: "🔔"; }
+
+/* '\1f514' */
+.icon-attention:before {
+  content: "\26a0"; }
+
+/* '\26a0' */
+.icon-alert:before {
+  content: "💥"; }
+
+/* '\1f4a5' */
+.icon-vcard:before {
+  content: "\e722"; }
+
+/* '\e722' */
+.icon-address:before {
+  content: "\e723"; }
+
+/* '\e723' */
+.icon-location:before {
+  content: "\e724"; }
+
+/* '\e724' */
+.icon-map:before {
+  content: "\e727"; }
+
+/* '\e727' */
+.icon-direction:before {
+  content: "\27a2"; }
+
+/* '\27a2' */
+.icon-compass:before {
+  content: "\e728"; }
+
+/* '\e728' */
+.icon-cup:before {
+  content: "\2615"; }
+
+/* '\2615' */
+.icon-trash:before {
+  content: "\e729"; }
+
+/* '\e729' */
+.icon-doc:before {
+  content: "\e730"; }
+
+/* '\e730' */
+.icon-docs:before {
+  content: "\e736"; }
+
+/* '\e736' */
+.icon-doc-landscape:before {
+  content: "\e737"; }
+
+/* '\e737' */
+.icon-doc-text:before {
+  content: "📄"; }
+
+/* '\1f4c4' */
+.icon-doc-text-inv:before {
+  content: "\e731"; }
+
+/* '\e731' */
+.icon-newspaper:before {
+  content: "📰"; }
+
+/* '\1f4f0' */
+.icon-book-open:before {
+  content: "📖"; }
+
+/* '\1f4d6' */
+.icon-book:before {
+  content: "📕"; }
+
+/* '\1f4d5' */
+.icon-folder:before {
+  content: "📁"; }
+
+/* '\1f4c1' */
+.icon-archive:before {
+  content: "\e738"; }
+
+/* '\e738' */
+.icon-box:before {
+  content: "📦"; }
+
+/* '\1f4e6' */
+.icon-rss:before {
+  content: "\e73a"; }
+
+/* '\e73a' */
+.icon-phone:before {
+  content: "📞"; }
+
+/* '\1f4de' */
+.icon-cog:before {
+  content: "\2699"; }
+
+/* '\2699' */
+.icon-tools:before {
+  content: "\2692"; }
+
+/* '\2692' */
+.icon-share:before {
+  content: "\e73c"; }
+
+/* '\e73c' */
+.icon-shareable:before {
+  content: "\e73e"; }
+
+/* '\e73e' */
+.icon-basket:before {
+  content: "\e73d"; }
+
+/* '\e73d' */
+.icon-bag:before {
+  content: "👜"; }
+
+/* '\1f45c' */
+.icon-calendar:before {
+  content: "📅"; }
+
+/* '\1f4c5' */
+.icon-login:before {
+  content: "\e740"; }
+
+/* '\e740' */
+.icon-logout:before {
+  content: "\e741"; }
+
+/* '\e741' */
+.icon-mic:before {
+  content: "🎤"; }
+
+/* '\1f3a4' */
+.icon-mute:before {
+  content: "🔇"; }
+
+/* '\1f507' */
+.icon-sound:before {
+  content: "🔊"; }
+
+/* '\1f50a' */
+.icon-volume:before {
+  content: "\e742"; }
+
+/* '\e742' */
+.icon-clock:before {
+  content: "🕔"; }
+
+/* '\1f554' */
+.icon-hourglass:before {
+  content: "\23f3"; }
+
+/* '\23f3' */
+.icon-lamp:before {
+  content: "💡"; }
+
+/* '\1f4a1' */
+.icon-light-down:before {
+  content: "🔅"; }
+
+/* '\1f505' */
+.icon-light-up:before {
+  content: "🔆"; }
+
+/* '\1f506' */
+.icon-adjust:before {
+  content: "\25d1"; }
+
+/* '\25d1' */
+.icon-block:before {
+  content: "🚫"; }
+
+/* '\1f6ab' */
+.icon-resize-full:before {
+  content: "\e744"; }
+
+/* '\e744' */
+.icon-resize-small:before {
+  content: "\e746"; }
+
+/* '\e746' */
+.icon-popup:before {
+  content: "\e74c"; }
+
+/* '\e74c' */
+.icon-publish:before {
+  content: "\e74d"; }
+
+/* '\e74d' */
+.icon-window:before {
+  content: "\e74e"; }
+
+/* '\e74e' */
+.icon-arrow-combo:before {
+  content: "\e74f"; }
+
+/* '\e74f' */
+.icon-down-circled:before {
+  content: "\e758"; }
+
+/* '\e758' */
+.icon-left-circled:before {
+  content: "\e759"; }
+
+/* '\e759' */
+.icon-right-circled:before {
+  content: "\e75a"; }
+
+/* '\e75a' */
+.icon-up-circled:before {
+  content: "\e75b"; }
+
+/* '\e75b' */
+.icon-down-open:before {
+  content: "\e75c"; }
+
+/* '\e75c' */
+.icon-left-open:before {
+  content: "\e75d"; }
+
+/* '\e75d' */
+.icon-right-open:before {
+  content: "\e75e"; }
+
+/* '\e75e' */
+.icon-up-open:before {
+  content: "\e75f"; }
+
+/* '\e75f' */
+.icon-down-open-mini:before {
+  content: "\e760"; }
+
+/* '\e760' */
+.icon-left-open-mini:before {
+  content: "\e761"; }
+
+/* '\e761' */
+.icon-right-open-mini:before {
+  content: "\e762"; }
+
+/* '\e762' */
+.icon-up-open-mini:before {
+  content: "\e763"; }
+
+/* '\e763' */
+.icon-down-open-big:before {
+  content: "\e764"; }
+
+/* '\e764' */
+.icon-left-open-big:before {
+  content: "\e765"; }
+
+/* '\e765' */
+.icon-right-open-big:before {
+  content: "\e766"; }
+
+/* '\e766' */
+.icon-up-open-big:before {
+  content: "\e767"; }
+
+/* '\e767' */
+.icon-down:before {
+  content: "\2b07"; }
+
+/* '\2b07' */
+.icon-left:before {
+  content: "\2b05"; }
+
+/* '\2b05' */
+.icon-right:before {
+  content: "\27a1"; }
+
+/* '\27a1' */
+.icon-up:before {
+  content: "\2b06"; }
+
+/* '\2b06' */
+.icon-down-dir:before {
+  content: "\25be"; }
+
+/* '\25be' */
+.icon-left-dir:before {
+  content: "\25c2"; }
+
+/* '\25c2' */
+.icon-right-dir:before {
+  content: "\25b8"; }
+
+/* '\25b8' */
+.icon-up-dir:before {
+  content: "\25b4"; }
+
+/* '\25b4' */
+.icon-down-bold:before {
+  content: "\e4b0"; }
+
+/* '\e4b0' */
+.icon-left-bold:before {
+  content: "\e4ad"; }
+
+/* '\e4ad' */
+.icon-right-bold:before {
+  content: "\e4ae"; }
+
+/* '\e4ae' */
+.icon-up-bold:before {
+  content: "\e4af"; }
+
+/* '\e4af' */
+.icon-down-thin:before {
+  content: "\2193"; }
+
+/* '\2193' */
+.icon-left-thin:before {
+  content: "\2190"; }
+
+/* '\2190' */
+.icon-right-thin:before {
+  content: "\2192"; }
+
+/* '\2192' */
+.icon-up-thin:before {
+  content: "\2191"; }
+
+/* '\2191' */
+.icon-ccw:before {
+  content: "\27f2"; }
+
+/* '\27f2' */
+.icon-cw:before {
+  content: "\27f3"; }
+
+/* '\27f3' */
+.icon-arrows-ccw:before {
+  content: "🔄"; }
+
+/* '\1f504' */
+.icon-level-down:before {
+  content: "\21b3"; }
+
+/* '\21b3' */
+.icon-level-up:before {
+  content: "\21b0"; }
+
+/* '\21b0' */
+.icon-shuffle:before {
+  content: "🔀"; }
+
+/* '\1f500' */
+.icon-loop:before {
+  content: "🔁"; }
+
+/* '\1f501' */
+.icon-switch:before {
+  content: "\21c6"; }
+
+/* '\21c6' */
+.icon-play:before {
+  content: "\25b6"; }
+
+/* '\25b6' */
+.icon-stop:before {
+  content: "\25a0"; }
+
+/* '\25a0' */
+.icon-pause:before {
+  content: "\2389"; }
+
+/* '\2389' */
+.icon-record:before {
+  content: "\26ab"; }
+
+/* '\26ab' */
+.icon-to-end:before {
+  content: "\23ed"; }
+
+/* '\23ed' */
+.icon-to-start:before {
+  content: "\23ee"; }
+
+/* '\23ee' */
+.icon-fast-forward:before {
+  content: "\23e9"; }
+
+/* '\23e9' */
+.icon-fast-backward:before {
+  content: "\23ea"; }
+
+/* '\23ea' */
+.icon-progress-0:before {
+  content: "\e768"; }
+
+/* '\e768' */
+.icon-progress-1:before {
+  content: "\e769"; }
+
+/* '\e769' */
+.icon-progress-2:before {
+  content: "\e76a"; }
+
+/* '\e76a' */
+.icon-progress-3:before {
+  content: "\e76b"; }
+
+/* '\e76b' */
+.icon-target:before {
+  content: "🎯"; }
+
+/* '\1f3af' */
+.icon-palette:before {
+  content: "🎨"; }
+
+/* '\1f3a8' */
+.icon-list:before {
+  content: "\e005"; }
+
+/* '\e005' */
+.icon-list-add:before {
+  content: "\e003"; }
+
+/* '\e003' */
+.icon-signal:before {
+  content: "📶"; }
+
+/* '\1f4f6' */
+.icon-trophy:before {
+  content: "🏆"; }
+
+/* '\1f3c6' */
+.icon-battery:before {
+  content: "🔋"; }
+
+/* '\1f50b' */
+.icon-back-in-time:before {
+  content: "\e771"; }
+
+/* '\e771' */
+.icon-monitor:before {
+  content: "💻"; }
+
+/* '\1f4bb' */
+.icon-mobile:before {
+  content: "📱"; }
+
+/* '\1f4f1' */
+.icon-network:before {
+  content: "\e776"; }
+
+/* '\e776' */
+.icon-cd:before {
+  content: "💿"; }
+
+/* '\1f4bf' */
+.icon-inbox:before {
+  content: "\e777"; }
+
+/* '\e777' */
+.icon-install:before {
+  content: "\e778"; }
+
+/* '\e778' */
+.icon-globe:before {
+  content: "🌎"; }
+
+/* '\1f30e' */
+.icon-cloud:before {
+  content: "\2601"; }
+
+/* '\2601' */
+.icon-cloud-thunder:before {
+  content: "\26c8"; }
+
+/* '\26c8' */
+.icon-flash:before {
+  content: "\26a1"; }
+
+/* '\26a1' */
+.icon-moon:before {
+  content: "\263d"; }
+
+/* '\263d' */
+.icon-flight:before {
+  content: "\2708"; }
+
+/* '\2708' */
+.icon-paper-plane:before {
+  content: "\e79b"; }
+
+/* '\e79b' */
+.icon-leaf:before {
+  content: "🍂"; }
+
+/* '\1f342' */
+.icon-lifebuoy:before {
+  content: "\e788"; }
+
+/* '\e788' */
+.icon-mouse:before {
+  content: "\e789"; }
+
+/* '\e789' */
+.icon-briefcase:before {
+  content: "💼"; }
+
+/* '\1f4bc' */
+.icon-suitcase:before {
+  content: "\e78e"; }
+
+/* '\e78e' */
+.icon-dot:before {
+  content: "\e78b"; }
+
+/* '\e78b' */
+.icon-dot-2:before {
+  content: "\e78c"; }
+
+/* '\e78c' */
+.icon-dot-3:before {
+  content: "\e78d"; }
+
+/* '\e78d' */
+.icon-brush:before {
+  content: "\e79a"; }
+
+/* '\e79a' */
+.icon-magnet:before {
+  content: "\e7a1"; }
+
+/* '\e7a1' */
+.icon-infinity:before {
+  content: "\221e"; }
+
+/* '\221e' */
+.icon-erase:before {
+  content: "\232b"; }
+
+/* '\232b' */
+.icon-chart-pie:before {
+  content: "\e751"; }
+
+/* '\e751' */
+.icon-chart-line:before {
+  content: "📈"; }
+
+/* '\1f4c8' */
+.icon-chart-bar:before {
+  content: "📊"; }
+
+/* '\1f4ca' */
+.icon-chart-area:before {
+  content: "🔾"; }
+
+/* '\1f53e' */
+.icon-tape:before {
+  content: "\2707"; }
+
+/* '\2707' */
+.icon-graduation-cap:before {
+  content: "🎓"; }
+
+/* '\1f393' */
+.icon-language:before {
+  content: "\e752"; }
+
+/* '\e752' */
+.icon-ticket:before {
+  content: "🎫"; }
+
+/* '\1f3ab' */
+.icon-water:before {
+  content: "💦"; }
+
+/* '\1f4a6' */
+.icon-droplet:before {
+  content: "💧"; }
+
+/* '\1f4a7' */
+.icon-air:before {
+  content: "\e753"; }
+
+/* '\e753' */
+.icon-credit-card:before {
+  content: "💳"; }
+
+/* '\1f4b3' */
+.icon-floppy:before {
+  content: "💾"; }
+
+/* '\1f4be' */
+.icon-clipboard:before {
+  content: "📋"; }
+
+/* '\1f4cb' */
+.icon-megaphone:before {
+  content: "📣"; }
+
+/* '\1f4e3' */
+.icon-database:before {
+  content: "\e754"; }
+
+/* '\e754' */
+.icon-drive:before {
+  content: "\e755"; }
+
+/* '\e755' */
+.icon-bucket:before {
+  content: "\e756"; }
+
+/* '\e756' */
+.icon-thermometer:before {
+  content: "\e757"; }
+
+/* '\e757' */
+.icon-key:before {
+  content: "🔑"; }
+
+/* '\1f511' */
+.icon-flow-cascade:before {
+  content: "\e790"; }
+
+/* '\e790' */
+.icon-flow-branch:before {
+  content: "\e791"; }
+
+/* '\e791' */
+.icon-flow-tree:before {
+  content: "\e792"; }
+
+/* '\e792' */
+.icon-flow-line:before {
+  content: "\e793"; }
+
+/* '\e793' */
+.icon-flow-parallel:before {
+  content: "\e794"; }
+
+/* '\e794' */
+.icon-rocket:before {
+  content: "🚀"; }
+
+/* '\1f680' */
+.icon-gauge:before {
+  content: "\e7a2"; }
+
+/* '\e7a2' */
+.icon-traffic-cone:before {
+  content: "\e7a3"; }
+
+/* '\e7a3' */
+.icon-cc:before {
+  content: "\e7a5"; }
+
+/* '\e7a5' */
+.icon-cc-by:before {
+  content: "\e7a6"; }
+
+/* '\e7a6' */
+.icon-cc-nc:before {
+  content: "\e7a7"; }
+
+/* '\e7a7' */
+.icon-cc-nc-eu:before {
+  content: "\e7a8"; }
+
+/* '\e7a8' */
+.icon-cc-nc-jp:before {
+  content: "\e7a9"; }
+
+/* '\e7a9' */
+.icon-cc-sa:before {
+  content: "\e7aa"; }
+
+/* '\e7aa' */
+.icon-cc-nd:before {
+  content: "\e7ab"; }
+
+/* '\e7ab' */
+.icon-cc-pd:before {
+  content: "\e7ac"; }
+
+/* '\e7ac' */
+.icon-cc-zero:before {
+  content: "\e7ad"; }
+
+/* '\e7ad' */
+.icon-cc-share:before {
+  content: "\e7ae"; }
+
+/* '\e7ae' */
+.icon-cc-remix:before {
+  content: "\e7af"; }
+
+/* '\e7af' */
+.icon-github:before {
+  content: "\f300"; }
+
+/* '\f300' */
+.icon-github-circled:before {
+  content: "\f301"; }
+
+/* '\f301' */
+.icon-flickr:before {
+  content: "\f303"; }
+
+/* '\f303' */
+.icon-flickr-circled:before {
+  content: "\f304"; }
+
+/* '\f304' */
+.icon-vimeo:before {
+  content: "\f306"; }
+
+/* '\f306' */
+.icon-vimeo-circled:before {
+  content: "\f307"; }
+
+/* '\f307' */
+.icon-twitter:before {
+  content: "\f309"; }
+
+/* '\f309' */
+.icon-twitter-circled:before {
+  content: "\f30a"; }
+
+/* '\f30a' */
+.icon-facebook:before {
+  content: "\f30c"; }
+
+/* '\f30c' */
+.icon-facebook-circled:before {
+  content: "\f30d"; }
+
+/* '\f30d' */
+.icon-facebook-squared:before {
+  content: "\f30e"; }
+
+/* '\f30e' */
+.icon-gplus:before {
+  content: "\f30f"; }
+
+/* '\f30f' */
+.icon-gplus-circled:before {
+  content: "\f310"; }
+
+/* '\f310' */
+.icon-pinterest:before {
+  content: "\f312"; }
+
+/* '\f312' */
+.icon-pinterest-circled:before {
+  content: "\f313"; }
+
+/* '\f313' */
+.icon-tumblr:before {
+  content: "\f315"; }
+
+/* '\f315' */
+.icon-tumblr-circled:before {
+  content: "\f316"; }
+
+/* '\f316' */
+.icon-linkedin:before {
+  content: "\f318"; }
+
+/* '\f318' */
+.icon-linkedin-circled:before {
+  content: "\f319"; }
+
+/* '\f319' */
+.icon-dribbble:before {
+  content: "\f31b"; }
+
+/* '\f31b' */
+.icon-dribbble-circled:before {
+  content: "\f31c"; }
+
+/* '\f31c' */
+.icon-stumbleupon:before {
+  content: "\f31e"; }
+
+/* '\f31e' */
+.icon-stumbleupon-circled:before {
+  content: "\f31f"; }
+
+/* '\f31f' */
+.icon-lastfm:before {
+  content: "\f321"; }
+
+/* '\f321' */
+.icon-lastfm-circled:before {
+  content: "\f322"; }
+
+/* '\f322' */
+.icon-rdio:before {
+  content: "\f324"; }
+
+/* '\f324' */
+.icon-rdio-circled:before {
+  content: "\f325"; }
+
+/* '\f325' */
+.icon-spotify:before {
+  content: "\f327"; }
+
+/* '\f327' */
+.icon-spotify-circled:before {
+  content: "\f328"; }
+
+/* '\f328' */
+.icon-qq:before {
+  content: "\f32a"; }
+
+/* '\f32a' */
+.icon-instagrem:before {
+  content: "\f32d"; }
+
+/* '\f32d' */
+.icon-dropbox:before {
+  content: "\f330"; }
+
+/* '\f330' */
+.icon-evernote:before {
+  content: "\f333"; }
+
+/* '\f333' */
+.icon-flattr:before {
+  content: "\f336"; }
+
+/* '\f336' */
+.icon-skype:before {
+  content: "\f339"; }
+
+/* '\f339' */
+.icon-skype-circled:before {
+  content: "\f33a"; }
+
+/* '\f33a' */
+.icon-renren:before {
+  content: "\f33c"; }
+
+/* '\f33c' */
+.icon-sina-weibo:before {
+  content: "\f33f"; }
+
+/* '\f33f' */
+.icon-paypal:before {
+  content: "\f342"; }
+
+/* '\f342' */
+.icon-picasa:before {
+  content: "\f345"; }
+
+/* '\f345' */
+.icon-soundcloud:before {
+  content: "\f348"; }
+
+/* '\f348' */
+.icon-mixi:before {
+  content: "\f34b"; }
+
+/* '\f34b' */
+.icon-behance:before {
+  content: "\f34e"; }
+
+/* '\f34e' */
+.icon-google-circles:before {
+  content: "\f351"; }
+
+/* '\f351' */
+.icon-vkontakte:before {
+  content: "\f354"; }
+
+/* '\f354' */
+.icon-smashing:before {
+  content: "\f357"; }
+
+/* '\f357' */
+.icon-sweden:before {
+  content: "\f601"; }
+
+/* '\f601' */
+.icon-db-shape:before {
+  content: "\f600"; }
+
+/* '\f600' */
+.icon-logo-db:before {
+  content: "\f603"; }
+
+/* '\f603' */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  appearance: none;
+  background-color: #d83621;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #ad2b1a;
+    color: #fff; }
+  button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
+      background-color: #d83621; }
+
+fieldset {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 0.75em;
+  padding: 1.5em; }
+
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em; }
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.375em; }
+  label.required::after {
+    content: "*"; }
+  label abbr {
+    display: none; }
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple=multiple] {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color 150ms ease;
+  width: 100%; }
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+  select[multiple=multiple]:hover {
+    border-color: #b1b1b1; }
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+  select[multiple=multiple]:focus {
+    border-color: #d83621;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(194, 48, 30, 0.7);
+    outline: none; }
+  input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
+  select[multiple=multiple]:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed; }
+    input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
+    select[multiple=multiple]:disabled:hover {
+      border: 1px solid #ddd; }
+
+textarea {
+  resize: vertical; }
+
+input[type="search"] {
+  appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    display: inline-block; }
+
+input[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%; }
+
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto; }
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+dl {
+  margin-bottom: 0.75em; }
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  dl dd {
+    margin: 0; }
+
+table {
+  border-collapse: collapse;
+  font-feature-settings: "kern", "liga", "tnum";
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left; }
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0; }
+
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+body {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  color: #d83621;
+  text-decoration: none;
+  transition: color 150ms ease; }
+  a:active, a:focus, a:hover {
+    color: #a22919; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+body {
+  padding-top: 3em; }
+
+:focus {
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(194, 48, 30, 0.7); }
+
+.logo {
+  font-family: "Fugaz One", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+.top-bar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background: #d83621; }
+  .top-bar .logo {
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 2em;
+    margin-left: 0.75em; }
+  .top-bar .menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3em;
+    padding: 0.75em; }
+
+.menu-button .icon {
+  font-size: 1.5em;
+  margin: 0; }
+
+.bar-graph {
+  height: 2em;
+  background-color: #ddd; }
+  .bar-graph .bar {
+    height: 2em;
+    background-color: #d83621; }
+  .bar-graph .label {
+    position: absolute;
+    line-height: 2em;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 0.5em; }
+
+.team-list {
+  margin: 2em; }
+  .team-list li {
+    margin-top: 2em; }
+    .team-list li a {
+      color: #000; }
+    .team-list li.hamilton-tiger-cats .bar {
+      background-color: #231F20; }
+    .team-list li.edmonton-eskimos .bar {
+      background-color: #004812; }
+    .team-list li.ottawa-redblacks .bar {
+      background-color: #000; }
+    .team-list li.winnipeg-blue-bombers .bar {
+      background-color: #002A5C; }
+    .team-list li.toronto-argonauts .bar {
+      background-color: #003264; }
+    .team-list li.saskatchewan-roughriders .bar {
+      background-color: #0B1A13; }
+    .team-list li.montreal-alouettes .bar {
+      background-color: #003D79; }
+    .team-list li.bc-lions .bar {
+      background-color: #040204; }
+    .team-list li.calgary-stampeders .bar {
+      background-color: #040204; }
+
+.menu {
+  position: fixed;
+  top: 2.875em;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: #333; }
+  .menu a {
+    display: block;
+    color: #fff;
+    font-size: 1.25em;
+    text-align: center;
+    line-height: 2em;
+    border-top: #999 1px solid; }
+
+.hidden {
+  display: none; }
+
+.fan-page .primary-header {
+  background-color: #222;
+  height: 200px; }
+
+.fan-page .score {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: -100px auto 0px;
+  background: #fff;
+  border-radius: 50%; }
+  .fan-page .score .score-text {
+    line-height: 180px;
+    text-align: center;
+    font-size: 48px;
+    font-family: "" Fugaz One ", " Helvetica Neue ", " Helvetica ", " Roboto ", " Arial ", sans-serif";
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50%; }
+
+.fan-page .score-content {
+  margin-top: 40px; }
+  .fan-page .score-content .score-text {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold; }
+  .fan-page .score-content .fan-twitter, .fan-page .score-content .fan-email {
+    text-align: center; }
+  .fan-page .score-content .fan-team {
+    text-align: center;
+    font-size: 24px; }
+  .fan-page .score-content .fan-interactions {
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    background-color: #fff; }
+    .fan-page .score-content .fan-interactions .interactions-header {
+      text-align: center;
+      font-size: 24px; }
+    .fan-page .score-content .fan-interactions .interactions-number {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      line-height: 130px;
+      font-size: 36px;
+      font-family: "" Fugaz One ", " Helvetica Neue ", " Helvetica ", " Roboto ", " Arial ", sans-serif";
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 10px; }
+
+.fan-page.hamilton-tiger-cats .primary-header {
+  background-color: #231F20; }
+
+.fan-page.hamilton-tiger-cats .score .score-text {
+  border-color: #FDBA31 !important; }
+
+.fan-page.hamilton-tiger-cats .interactions-number {
+  border-color: #FDBA31; }
+
+.fan-page.edmonton-eskimos .primary-header {
+  background-color: #004812; }
+
+.fan-page.edmonton-eskimos .score .score-text {
+  border-color: #FDBA31; }
+
+.fan-page.edmonton-eskimos .interactions-number {
+  border-color: #FDBA31; }
+
+.fan-page.ottawa-redblacks .primary-header {
+  background-color: #000; }
+
+.fan-page.ottawa-redblacks .score .score-text {
+  border-color: #C4122F !important; }
+
+.fan-page.ottawa-redblacks .interactions-number {
+  border-color: #C4122F; }
+
+.fan-page.winnipeg-blue-bombers .primary-header {
+  background-color: #002A5C; }
+
+.fan-page.winnipeg-blue-bombers .score .score-text {
+  border-color: #90723C !important; }
+
+.fan-page.winnipeg-blue-bombers .interactions-number {
+  border-color: #90723C; }
+
+.fan-page.toronto-argonauts .primary-header {
+  background-color: #003264; }
+
+.fan-page.toronto-argonauts .score .score-text {
+  border-color: #8BA6BE !important; }
+
+.fan-page.toronto-argonauts .interactions-number {
+  border-color: #8BA6BE; }
+
+.fan-page.saskatchewan-roughriders .primary-header {
+  background-color: #0B1A13; }
+
+.fan-page.saskatchewan-roughriders .score .score-text {
+  border-color: #00704A !important; }
+
+.fan-page.saskatchewan-roughriders .interactions-number {
+  border-color: #00704A; }
+
+.fan-page.montreal-alouettes .primary-header {
+  background-color: #003D79; }
+
+.fan-page.montreal-alouettes .score .score-text {
+  border-color: #98012E !important; }
+
+.fan-page.montreal-alouettes .interactions-number {
+  border-color: #98012E; }
+
+.fan-page.bc-lions .primary-header {
+  background-color: #040204; }
+
+.fan-page.bc-lions .score .score-text {
+  border-color: #EB6E1F !important; }
+
+.fan-page.bc-lions .interactions-number {
+  border-color: #EB6E1F; }
+
+.fan-page.calgary-stampeders .primary-header {
+  background-color: #040204; }
+
+.fan-page.calgary-stampeders .score .score-text {
+  border-color: #E41A34 !important; }
+
+.fan-page.calgary-stampeders .interactions-number {
+  border-color: #E41A34; }
+
+.team-page .primary-header {
+  background-color: #222;
+  height: 200px; }
+
+.team-page .score {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: -100px auto 0px;
+  background: #fff;
+  border-radius: 50%; }
+  .team-page .score .score-text {
+    line-height: 180px;
+    text-align: center;
+    font-size: 48px;
+    font-family: "" Fugaz One ", " Helvetica Neue ", " Helvetica ", " Roboto ", " Arial ", sans-serif";
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50%; }
+
+.team-page .score-content {
+  margin-top: 40px; }
+  .team-page .score-content .score-text {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold; }
+
+.team-page .team-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; }
+
+.team-page .fans-header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold; }
+
+.team-page .fan {
+  background-color: #efefef;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: center; }
+
+.team-page.hamilton-tiger-cats .primary-header {
+  background-color: #231F20; }
+
+.team-page.hamilton-tiger-cats .score .score-text {
+  border-color: #FDBA31 !important; }
+
+.team-page.edmonton-eskimos .primary-header {
+  background-color: #004812; }
+
+.team-page.edmonton-eskimos .score .score-text {
+  border-color: #FDBA31; }
+
+.team-page.ottawa-redblacks .primary-header {
+  background-color: #000; }
+
+.team-page.ottawa-redblacks .score .score-text {
+  border-color: #C4122F !important; }
+
+.team-page.winnipeg-blue-bombers .primary-header {
+  background-color: #002A5C; }
+
+.team-page.winnipeg-blue-bombers .score .score-text {
+  border-color: #90723C !important; }
+
+.team-page.toronto-argonauts .primary-header {
+  background-color: #003264; }
+
+.team-page.toronto-argonauts .score .score-text {
+  border-color: #8BA6BE !important; }
+
+.team-page.saskatchewan-roughriders .primary-header {
+  background-color: #0B1A13; }
+
+.team-page.saskatchewan-roughriders .score .score-text {
+  border-color: #00704A !important; }
+
+.team-page.montreal-alouettes .primary-header {
+  background-color: #003D79; }
+
+.team-page.montreal-alouettes .score .score-text {
+  border-color: #98012E !important; }
+
+.team-page.bc-lions .primary-header {
+  background-color: #040204; }
+
+.team-page.bc-lions .score .score-text {
+  border-color: #EB6E1F !important; }
+
+.team-page.calgary-stampeders .primary-header {
+  background-color: #040204; }
+
+.team-page.calgary-stampeders .score .score-text {
+  border-color: #E41A34 !important; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }

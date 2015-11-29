@@ -3,17 +3,15 @@
   <div class="score">
     <div class="score-text">{{model.fanScore}}</div>
   </div>
-  <div class="score-content">
-    <div class="score-text">{{model.name}}</div>
-    
-  </div>
+      
+  <div class="team-text">{{model.name}}</div>
+
+  <h2 class="fans-header">Fans</h2>
+  {{#each model.fans as |fan|}}
+    {{#link-to 'fan' fan.id}}
+      <div class="fan">
+        <div class="name">{{fan.name}}</div>
+      </div>
+    {{/link-to}}
+  {{/each}}
 </div>
-<h2>Fans</h2>
-{{#each model.fans as |fan|}}
-  {{#link-to 'fan' fan.id}}
-    <div class="fan">
-      <div class="name">{{fan.name}}</div>
-      <div class="score">{{fan.fanScore.score}}</div>
-    </div>
-  {{/link-to}}
-{{/each}}

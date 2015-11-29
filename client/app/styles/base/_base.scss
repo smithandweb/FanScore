@@ -419,6 +419,24 @@ body {
     }
   }
 
+  .team-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .fans-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .fan {
+    background-color: #efefef;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
   &.hamilton-tiger-cats {
     
     .primary-header {
