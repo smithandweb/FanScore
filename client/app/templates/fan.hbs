@@ -1,4 +1,15 @@
-<h2>{{model.name}}</h2>
-{{model.twitter}}
-<h4>FanScore</h4>
-<div class="fanscore">{{fanScore.score}}</div>
+<div class="fan-page {{fanScore.team.cssClass}}">
+  <div class="primary-header"></div>
+  <div class="score">
+    <div class="score-text">{{fanScore.score}}</div>
+  </div>
+  <div class="score-content">
+    <div class="score-text">{{model.name}}</div>
+    <div class="fan-team">{{fanScore.team.name}} fan</div>
+    <div class="fan-twitter"><span class="icon-twitter"></span>{{model.twitter}}</div>
+    <div class="fan-interactions">
+      <div class="interactions-header">Interactions</div>
+      <div class="interactions-number">{{fanScore.interactions}}</div>
+    </div>
+  </div>
+</div>

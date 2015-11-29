@@ -16,5 +16,8 @@ export default DS.Model.extend({
   }),
   fanScorePercent: Ember.computed('fanScore', function () {
     return Math.floor((this.get('fanScore') / 26000) * 100);
+  }),
+  cssClass: Ember.computed('name', function () {
+    return this.get('name').dasherize();
   })
 });
