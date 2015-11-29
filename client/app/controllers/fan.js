@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  fanScores: Ember.computed(() => {
-    window.fanscore = this;
-    //return this.model.get('fanScores').objectAt(0);
-  }) 
+  fanScore: Ember.computed('model.fanScore', function () {
+    return this.get('model.fanScore').objectAt(0);
+  }),
 });
