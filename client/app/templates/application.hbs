@@ -1,9 +1,13 @@
 <header class="top-bar">
   <h1 class="logo">Fan Score</h1>
-  <button class="menu-button">
+  <button class="menu-button" {{action 'toggleMenu'}}>
     <span class="icon icon-menu"></span>
   </button>
 </header>
-<nav class="menu">
+<nav class="menu {{menuHidden}}">
+  <ul>
+    <li>{{link-to 'Home' 'index'}}</li>
+    <li>{{link-to 'Teams' 'teams'}}</li>
+  </ul>
 </nav>
 {{outlet}}

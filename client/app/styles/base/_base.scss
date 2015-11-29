@@ -28,7 +28,8 @@ body {
 }
 
 .top-bar {
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
@@ -64,4 +65,39 @@ body {
     height: 2em;
     background-color: $action-color;
   }
+  .label {
+    position: absolute;
+    line-height: 2em;
+    color: $white;
+    font-weight: 600;
+    margin-left: 0.5em;
+  }
+}
+
+.team-list {
+  li {
+    margin-top: 2em;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 2.875em;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: $dark-gray;
+  a {
+    display: block;
+    color: $white;
+    // font-weight: 600;
+    font-size: 1.25em;
+    text-align: center;
+    line-height: 2em;
+    border-top: $medium-gray 1px solid;
+  }
+}
+
+.hidden {
+  display: none;
 }
