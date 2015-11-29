@@ -1,10 +1,10 @@
 <ul>
   {{#each model as |team|}}
   <li>
-    <p>
+    {{#link-to 'team' team}}
       <h2><em>{{team.name}}</em></h2>
       {{#bar-graph percentage=50}}{{team.fanScore}}{{/bar-graph}}
-    </p>
+    {{/link-to}}
   </li>
   {{/each}}
 </ul>
