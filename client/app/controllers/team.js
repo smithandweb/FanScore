@@ -5,7 +5,11 @@ export default Ember.Controller.extend({
     let fans;
     if (this.get('model.fans')) {
       fans = this.get('model.fans').map((item) => {
-        return {fanScore: item.get('fanScore').objectAt(0), name: item.get('name')}
+        return {
+          fanScore: item.get('fanScore').objectAt(0), 
+          name: item.get('name'),
+          id: item.get('id')
+        };
       });
     }
     return fans;

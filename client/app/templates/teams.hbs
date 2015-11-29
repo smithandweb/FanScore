@@ -1,6 +1,6 @@
 <ul class="team-list">
   {{#each model as |team|}}
-  <li>
+  <li class="{{team.cssClass}}">
     {{#link-to 'team' team}}
       <h2><em>{{team.name}}</em></h2>
       {{#bar-graph percentage=team.fanScorePercent}}{{team.fanScore}}{{/bar-graph}}

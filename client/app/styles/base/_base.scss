@@ -75,8 +75,65 @@ body {
 }
 
 .team-list {
+  margin: 2em;
   li {
     margin-top: 2em;
+    a {
+      color: #000;
+    }
+    &.hamilton-tiger-cats {
+      .bar {
+        background-color: $ham-pri;
+      } 
+    }
+
+    &.edmonton-eskimos {
+      .bar {
+        background-color: $edm-pri;
+      } 
+    }
+
+    &.ottawa-redblacks {
+      .bar {
+        background-color: $ott-pri;
+      } 
+    }
+
+    &.winnipeg-blue-bombers {
+      .bar {
+        background-color: $wpg-pri;
+      }
+    }
+
+    &.toronto-argonauts {
+      .bar {
+        background-color: $tor-pri;
+      }
+    }
+
+    &.saskatchewan-roughriders {
+      .bar {
+        background-color: $sask-pri;
+      }
+    }
+
+    &.montreal-alouettes {
+      .bar {
+        background-color: $mon-pri;
+      }
+    }
+
+    &.bc-lions {
+      .bar {
+        background-color: $bc-pri;
+      }
+    }
+
+    &.calgary-stampeders {
+      .bar {
+        background-color: $cgy-pri;
+      }
+    }
   }
 }
 
