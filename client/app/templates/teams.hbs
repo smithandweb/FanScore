@@ -2,7 +2,7 @@
   {{#each model as |team|}}
   <li>
     <p>
-      <h3><em>{{team.name}}</em></h3>
+      <h2><em>{{team.name}}</em></h2>
       {{#bar-graph percentage=50}}{{team.fanScore}}{{/bar-graph}}
     </p>
   </li>
