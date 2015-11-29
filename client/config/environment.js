@@ -25,7 +25,7 @@ module.exports = function(environment) {
       'font-src': "'self' https://*.gstatic.com ",
       'connect-src': "'self' ",
       'img-src': "'self' https://*.googleapis.com https://*.gstatic.com data * ",
-      'style-src': "'self' https://*.googleapis.com ",
+      'style-src': "'self' 'unsafe-inline' https://*.googleapis.com ",
       'media-src': "'self' "
     }
     

@@ -1,0 +1,12 @@
+<ul>
+  {{#each model as |team|}}
+  <li>
+    <p>
+      <h3><em>{{team.name}}</em></h3>
+      {{#bar-graph percentage=50}}{{team.fanScore}}{{/bar-graph}}
+    </p>
+  </li>
+  {{/each}}
+</ul>
+
+{{outlet}}

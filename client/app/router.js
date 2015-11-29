@@ -15,6 +15,8 @@ Router.map(function() {
 
 Router.map(function() {
   this.route('fanscore', { path: '/fanscore/:fanscore_id' });
+  this.route('team');
+  this.route('teams');
 });
 
 export default Router;
