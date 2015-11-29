@@ -1,5 +1,17 @@
-{{model.name}}
-
-{{#each model.games as |game|}}
-  {{game.attendance}}
+<div class="team-page {{model.cssClass}}">
+  <div class="primary-header"></div>
+  <div class="score">
+    <div class="score-text">5000</div>
+  </div>
+  <div class="score-content">
+    <div class="score-text">{{model.name}}</div>
+    
+  </div>
+</div>
+<h2>Fans</h2>
+{{#each model.fans as |fan|}}
+  <div class="fan">
+    <div class="name">{{fan.name}}</div>
+    <div class="score">{{fan.fanScore.score}}</div>
+  </div>
 {{/each}}

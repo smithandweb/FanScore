@@ -288,6 +288,158 @@ body {
       border-color: $cgy-sec;
     }   
   }
+}
 
+.team-page {
 
+  .primary-header {
+    background-color: #222;
+    height: 200px;
+  }
+
+  .score {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: -100px auto 0px;
+    background: #fff;
+    border-radius: 50%;
+
+    .score-text {
+      line-height: 180px;
+      text-align: center;
+      font-size: 48px;
+      font-family: ""Fugaz One", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif";
+      border-style: solid;
+      border-width: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .score-content {
+    margin-top: 40px;
+
+    .score-text {
+      font-size: 24px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  &.hamilton-tiger-cats {
+    
+    .primary-header {
+      background-color: $ham-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $ham-sec!important;
+      }
+    }  
+  }
+
+  &.edmonton-eskimos {
+    
+    .primary-header {
+      background-color: $edm-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $edm-sec;
+      }
+    }
+  }
+
+  &.ottawa-redblacks {
+    
+    .primary-header {
+      background-color: $ott-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $ott-sec!important;
+      }
+    }
+  }
+
+  &.winnipeg-blue-bombers {
+    
+    .primary-header {
+      background-color: $wpg-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $wpg-sec!important;
+      }
+    }  
+  }
+
+  &.toronto-argonauts {
+    
+    .primary-header {
+      background-color: $tor-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $tor-sec!important;
+      }
+    }  
+  }
+
+  &.saskatchewan-roughriders {
+    
+    .primary-header {
+      background-color: $sask-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $sask-sec!important;
+      }
+    }  
+  }
+
+  &.montreal-alouettes {
+    
+    .primary-header {
+      background-color: $mon-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $mon-sec!important;
+      }
+    } 
+  }
+
+  &.bc-lions {
+    
+    .primary-header {
+      background-color: $bc-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $bc-sec!important;
+      }
+    }  
+  }
+
+  &.calgary-stampeders {
+    
+    .primary-header {
+      background-color: $cgy-pri;
+    }
+    .score {
+
+      .score-text {
+        border-color: $cgy-sec!important;
+      }
+    }   
+  }
 }
