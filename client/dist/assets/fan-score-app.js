@@ -1115,7 +1115,7 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("fan-score-app/app")["default"].create({"host":"http://api.fanscore.abc:8080","name":"fan-score-app","version":"0.0.0+a98ca803"});
+  require("fan-score-app/app")["default"].create({"host":"http://api.fanscore.abc:8080","name":"fan-score-app","version":"0.0.0+1a76acd6"});
 }
 
 /* jshint ignore:end */
